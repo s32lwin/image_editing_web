@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+    <!--canvas-->
+   
+    <div class="container disable">
+        <h2><b>IMAGE EDITING</b></h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                    <div class="filter">
+                        <label class="filters">Filters</label>
+                        <div class="options">
+                            <button id="Brightness" class="active">Brightness</button>
+                            <button id="inversion" class="active">inversion</button>
+                            <button id="GrayScale" class="active">GrayScale</button>
+                            <button id="Saturation" class="active">Saturation</button>
+                        </div>
+                        <div class="slider">
+                            <div class="filter-info">
+                                <p class="name">Brightness</p>
+                                <p class="vaules">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200">
+                        </div>
+                    </div>
+                        <div class="rotate">
+                            <label class="title">ROTATE & FLIP</label>
+                            <div class="options">
+                            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="vertical"><i class='bx bx-reflect-vertical'></i></button>
+                            <button id="horizontal"><i class='bx bx-reflect-horizontal'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-image">
+                        <img src="/image-placeholder.svg" alt="" height="500" width="600">
+                        
+                    </div>
+            </div>
+            <div class="controls">
+                <button class="reset-filters">RESET FILTERS</button>
+                <div class="row">
+                    <input type="file" class="file-input" accept="image/*" hidden >
+                    <button class="choose-image" >CHOOSE IMAGE</button>
+                    <button class="save-image">SAVE IMAGE</button>
+                </div>
+            </div>
+        </div>
+   
+    <!--/canvas-->
+
+    <script src="script.js"></script>
+</body>
+</html>
